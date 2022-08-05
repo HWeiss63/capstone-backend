@@ -7,3 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Event.create!(title: "24w appt", date: "September 12th", time: "11:00AM", location: "8901 Rockville Pike", memo: "Bring ID & Insraucne card", user_id: 1)
+Event.create!(title: "Baby shower", date: "September 24th", time: "2:00PM", location: "7400 Tuckerman Ln", user_id: 1)
