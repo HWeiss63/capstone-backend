@@ -8,3 +8,38 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+### Events Index
+GET http://localhost:3000/events.json
+
+### Events Create
+POST http://localhost:3000/events.json
+Content-Type: application/json
+
+{
+  "title": "test title",
+  "date": "test date",
+  "time": "test time",
+  "location": "test location",
+  "memo": "test memo",
+  "user_id": 1
+}
+
+### Events Show
+GET http://localhost:3000/events/1.json
+
+### Events Update
+PATCH http://localhost:3000/events/5.json
+Content-Type: application/json
+
+{
+  "title": "test title!!",
+  "date": "test date!!",
+  "time": "test time!!",
+  "location": "test location!!",
+  "memo": "test memo!!",
+  "user_id": 1
+}
+
+### Events Destroy
+DELETE http://localhost:3000/events/5.json
