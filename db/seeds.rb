@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Event.create!(title: "24w appt", date: "September 12th", time: "11:00AM", location: "8901 Rockville Pike", memo: "Bring ID & Insraucne card", user_id: 1)
