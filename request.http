@@ -43,3 +43,6 @@ Content-Type: application/json
 
 ### Events Destroy
 DELETE http://localhost:3000/events/5.json
+
+### Pregnancy Tip API web request
+GET https://health.gov/myhealthfinder/api/v3/topicsearch.json?TopicId=30574
