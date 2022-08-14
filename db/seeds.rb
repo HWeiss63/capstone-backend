@@ -1,10 +1,53 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Event.create!(title: "24w appt", date: "September 12th", time: "11:00AM", location: "8901 Rockville Pike", memo: "Bring ID & Insraucne card", user_id: 1)
+# Event.create!(title: "Baby shower", date: "September 24th", time: "2:00PM", location: "7400 Tuckerman Ln", user_id: 1)
 
-Event.create!(title: "24w appt", date: "September 12th", time: "11:00AM", location: "8901 Rockville Pike", memo: "Bring ID & Insraucne card", user_id: 1)
-Event.create!(title: "Baby shower", date: "September 24th", time: "2:00PM", location: "7400 Tuckerman Ln", user_id: 1)
+Checklist.create!(item_name: "Crib, cradle or bassinet", category: "Nursery")
+Checklist.create!(item_name: "Mattress for crib", category: "Nursery")
+Checklist.create!(item_name: "Rocking or arm chair", category: "Nursery")
+Checklist.create!(item_name: "Baby monitor", category: "Nursery")
+Checklist.create!(item_name: "Dresser", category: "Nursery")
+Checklist.create!(item_name: "A cool mist humidifier", category: "Nursery")
+
+Checklist.create!(item_name: "Car seat", category: "Baby gear")
+Checklist.create!(item_name: "Stroller", category: "Baby gear")
+Checklist.create!(item_name: "Baby swing or bouncer", category: "Baby gear")
+Checklist.create!(item_name: "Playard with bassinet", category: "Baby gear")
+Checklist.create!(item_name: "High chair", category: "Baby gear")
+
+Checklist.create!(item_name: "4-8 consies", category: "Baby clothes")
+Checklist.create!(item_name: "4-8 undershirts", category: "Baby clothes")
+Checklist.create!(item_name: "4-8 one-piece PJs", category: "Baby clothes")
+Checklist.create!(item_name: "2 blanket sleepers for winter baby", category: "Baby clothes")
+Checklist.create!(item_name: "1-3 sweaters or jackets", category: "Baby clothes")
+Checklist.create!(item_name: "1-3 rompers or other dress-up outlets", category: "Baby clothes")
+Checklist.create!(item_name: "4-7 socks or booties", category: "Baby clothes")
+Checklist.create!(item_name: "1-3 hats", category: "Baby clothes")
+Checklist.create!(item_name: "No-scratch mittens", category: "Baby clothes")
+Checklist.create!(item_name: "Bunting bag or fleece suit for a winter baby", category: "Baby clothes")
+
+Checklist.create!(item_name: "10-16 bottles and nipples", category: "Feeding essentials")
+Checklist.create!(item_name: "Bottle brush", category: "Feeding essentials")
+Checklist.create!(item_name: "4-8 bibs", category: "Feeding essentials")
+Checklist.create!(item_name: "Burp cloths", category: "Feeding essentials")
+Checklist.create!(item_name: "2-4 pacifiers", category: "Feeding essentials")
+
+Checklist.create!(item_name: "Baby thermometer", category: "Health products")
+Checklist.create!(item_name: "First aid kit", category: "Health products")
+
+Checklist.create!(item_name: "1-3 washable crib mattress pads", category: "Baby bedding")
+Checklist.create!(item_name: "2-4 fitted crib sheets", category: "Baby bedding")
+Checklist.create!(item_name: "4-6 soft, light receiving blankets", category: "Baby bedding")
+Checklist.create!(item_name: "1-2 heavier blankets", category: "Baby bedding")
+
+Checklist.create!(item_name: "Changing table", category: "Diapering must-haves")
+Checklist.create!(item_name: "Diaper pall and liners", category: "Diapering must-haves")
+Checklist.create!(item_name: "Diaper bag", category: "Diapering must-haves")
+Checklist.create!(item_name: "Diaper cream", category: "Diapering must-haves")
+Checklist.create!(item_name: "Unscented baby wipes", category: "Diapering must-haves")
+Checklist.create!(item_name: "Soft washcloths", category: "Diapering must-haves")
+Checklist.create!(item_name: "6-10 dozen cloth diapers and 6-8 diaper covers, or 2-3 large boxes of disposable newborn-size diapers", category: "Diapering must-haves")
+
+Checklist.create!(item_name: "Baby bathtub", category: "Bath items")
+Checklist.create!(item_name: "2-4 soft towels or hooded baby towels", category: "Bath items")
+Checklist.create!(item_name: "Baby hairbrush", category: "Bath items")
+Checklist.create!(item_name: "Soft washcloths", category: "Bath items")
