@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # users
   post "/users" => "users#create"
 
+  # sessions
+  post "/sessions" => "sessions#create"
+
   # events
   get "/events" => "events#index"
   post "/events" => "events#create"
@@ -11,4 +14,9 @@ Rails.application.routes.draw do
 
   # checklists
   get "/checklists" => "checklists#index"
+
+  # responses
+  get "/responses" => "responses#index"
+  post "/responses" => "responses#create"
+  patch "/responses/:id" => "responses#update"
 end

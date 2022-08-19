@@ -1,6 +1,6 @@
 class ChecklistsController < ApplicationController
   def index
-    events = Event.all
-    render json: events.as_json
+    checklists = Checklist.all
+    render json: checklists.as_json
   end
 end

@@ -9,6 +9,15 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
 ### Events Index
 GET http://localhost:3000/events.json
 
@@ -43,6 +52,32 @@ Content-Type: application/json
 
 ### Events Destroy
 DELETE http://localhost:3000/events/5.json
+
+### Checklist Index
+GET http://localhost:3000/checklists.json
+
+### Responses Index
+GET http://localhost:3000/responses.json
+
+### Responses Create
+POST http://localhost:3000/responses.json
+Content-Type: application/json
+
+{
+  "checklist_id": 7,
+  "user_id": 1,
+  "quantity": 1,
+  "prepared": false
+}
+
+### Responses Update
+PATCH http://localhost:3000/responses/3.json
+Content-Type: application/json
+
+{
+  "prepared": false
+}
+
 
 ### Pregnancy Tip API web request
 GET https://health.gov/myhealthfinder/api/v3/topicsearch.json?TopicId=30574
