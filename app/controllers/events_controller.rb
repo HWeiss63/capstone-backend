@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user, except: [:index]
+
   def index
     events = Event.all
     render json: events.as_json
@@ -11,10 +13,13 @@ class EventsController < ApplicationController
       end: params[:end],
       location: params[:location],
       memo: params[:memo],
-      user_id: params[:user_id],
+      user_id: current_user.id,
     )
-    event.save
-    render json: event.as_json
+    if event.save
+      render json: event.as_json
+    else
+      render json: { errors: event.errors.full_messages }, status: 422
+    end
   end
 
   def show
@@ -29,9 +34,11 @@ class EventsController < ApplicationController
     event.end = params[:end] || event.end
     event.location = params[:location] || event.location
     event.memo = params[:memo] || event.memo
-    event.user_id = params[:user_id] || event.user_id
-    event.save
-    render json: event.as_json
+    if event.save
+      render json: event.as_json
+    else
+      render json: { errors: event.errors.full_messages }, status: 422
+    end
   end
 
   def destroy

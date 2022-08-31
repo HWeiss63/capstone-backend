@@ -1,4 +1,6 @@
 class ResponsesController < ApplicationController
+  before_action :authenticate_user, except: [:index]
+
   def index
     responses = Response.all
     render json: responses.as_json
@@ -7,7 +9,7 @@ class ResponsesController < ApplicationController
   def create
     response = Response.new(
       checklist_id: params[:checklist_id],
-      user_id: params[:user_id],
+      user_id: current_user.id,
       quantity: params[:quantity],
       prepared: params[:prepared],
     )

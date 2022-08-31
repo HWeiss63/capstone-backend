@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjIwNzU5NTF9.IwX9rAjeYSY0DPcpBarPoJ099Q_RM1aBqri3vGH0SDE
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -14,15 +16,17 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "adalise@test.com",
   "password": "password"
 }
 
 ### Events Index
 GET http://localhost:3000/events.json
+Authorization: Bearer {{ jwt }}
 
 ### Events Create
 POST http://localhost:3000/events.json
+Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
@@ -30,8 +34,7 @@ Content-Type: application/json
   "start": "test start",
   "end": "test end",
   "location": "test location",
-  "memo": "test memo",
-  "user_id": 1
+  "memo": "test memo"
 }
 
 ### Events Show
