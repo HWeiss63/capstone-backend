@@ -7,8 +7,8 @@ class EventsController < ApplicationController
   def create
     event = Event.new(
       title: params[:title],
-      date: params[:date],
-      time: params[:time],
+      start: params[:start],
+      end: params[:end],
       location: params[:location],
       memo: params[:memo],
       user_id: params[:user_id],
@@ -25,8 +25,8 @@ class EventsController < ApplicationController
   def update
     event = Event.find_by(id: params[:id])
     event.title = params[:title] || event.title
-    event.date = params[:date] || event.date
-    event.time = params[:time] || event.time
+    event.start = params[:start] || event.start
+    event.end = params[:end] || event.end
     event.location = params[:location] || event.location
     event.memo = params[:memo] || event.memo
     event.user_id = params[:user_id] || event.user_id

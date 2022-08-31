@@ -27,8 +27,8 @@ Content-Type: application/json
 
 {
   "title": "test title",
-  "date": "test date",
-  "time": "test time",
+  "start": "test start",
+  "end": "test end",
   "location": "test location",
   "memo": "test memo",
   "user_id": 1
@@ -38,15 +38,15 @@ Content-Type: application/json
 GET http://localhost:3000/events/1.json
 
 ### Events Update
-PATCH http://localhost:3000/events/5.json
+PATCH http://localhost:3000/events/2.json
 Content-Type: application/json
 
 {
-  "title": "test title!!",
-  "date": "test date!!",
-  "time": "test time!!",
-  "location": "test location!!",
-  "memo": "test memo!!",
+  "title": "Baby shower",
+  "start": "2022-09-17 11:00",
+  "end": "2022-09-17 14:00",
+  "location": "7400 Tuckerman Ln",
+  "memo": "",
   "user_id": 1
 }
 
