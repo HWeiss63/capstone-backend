@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user, except: [:index]
+  before_action :authenticate_user
 
   def index
-    events = Event.all
+    events = Event.where(user_id: current_user.id)
     render json: events.as_json
   end
 
