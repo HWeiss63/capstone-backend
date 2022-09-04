@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   # checklists
   get "/checklists" => "checklists#index"
+  post "/checklists" => "checklists#create"
 
   # responses
   get "/responses" => "responses#index"
