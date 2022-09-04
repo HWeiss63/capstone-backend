@@ -42,12 +42,13 @@ GET http://localhost:3000/events/1.json
 
 ### Events Update
 PATCH http://localhost:3000/events/2.json
+Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
   "title": "Baby shower",
-  "start": "2022-09-17 11:00",
-  "end": "2022-09-17 14:00",
+  "start": "2022-09-17 14:00",
+  "end": "2022-09-17 18:00",
   "location": "7400 Tuckerman Ln",
   "memo": "",
   "user_id": 1
@@ -69,7 +70,6 @@ Content-Type: application/json
 {
   "checklist_id": 7,
   "user_id": 1,
-  "quantity": 1,
   "prepared": false
 }
 
