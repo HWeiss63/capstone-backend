@@ -13,7 +13,13 @@ class ChecklistsController < ApplicationController
   end
 
   def create
-    p params[:body]
+    p "this is a test"
+    # params.each do |clist|
+    #   clist.each do |item|
+    #     p item
+    #   end
+    #   p clist
+    # end #[1]["checklist"]["id"]
   end
 
   # def index

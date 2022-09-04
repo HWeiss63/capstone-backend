@@ -12,11 +12,13 @@ class ResponsesController < ApplicationController
       user_id: current_user.id,
       prepared: params[:prepared],
     )
-    if response.save
-      render json: response.as_json
-    else
-      render json: { errors: response.errors.full_messages }, status: 422
-    end
+    response.save
+    render json: response.as_json
+    # if response.save
+    #   render json: response.as_json
+    # else
+    #   render json: { errors: response.errors.full_messages }, status: 422
+    # end
   end
 
   def update

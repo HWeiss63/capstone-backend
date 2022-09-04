@@ -81,7 +81,7 @@ Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
-  "checklist_id": 7,
+  "checklist_id": 8,
   "user_id": 1,
   "prepared": false
 }
