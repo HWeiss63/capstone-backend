@@ -14,12 +14,17 @@ class ChecklistsController < ApplicationController
 
   def create
     p "this is a test"
-    # params.each do |clist|
-    #   clist.each do |item|
-    #     p item
-    #   end
-    #   p clist
-    # end #[1]["checklist"]["id"]
+    params.except(:controller, :action, :checklist).each do |key, value|
+      p "-----"
+      p key
+      value.each do |item|
+        p "#######"
+        p item["checklist"]["id"]
+        p current_user.id
+        p item["answer"]
+      end
+      #p key
+    end #[1]["checklist"]["id"]
   end
 
   # def index
